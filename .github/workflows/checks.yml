@@ -1,0 +1,20 @@
+name: Offline checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  workflow-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install offline test dependencies
+        run: python -m pip install numpy==1.26.4 Pillow==11.3.0
+      - name: Check Python syntax
+        run: python -m compileall -q app.py detection_engine.py db_manager.py data_export.py generate_submission.py train_and_predict.py train_yolo_enhanced.py eda_analysis.py augmentation_demo.py test_vlm_detect.py tests yolo-cases/convert_annotations.py
+      - name: Check parsing, persistence, review, and exports
+        run: python -m unittest discover -s tests -v

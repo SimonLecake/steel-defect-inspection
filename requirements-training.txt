@@ -1,0 +1,4 @@
+-r requirements.txt
+# Optional: offline augmentation demonstrations and enhanced training scripts.
+albumentations==2.0.5
+opencv-python-headless==4.11.0.86

@@ -1,0 +1,37 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*credentials*
+*.pem
+*.key
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.idea/
+.vscode/
+.DS_Store
+
+# Models, datasets, and runtime records stay local
+*.pt
+*.onnx
+*.engine
+*.db
+*.db-*
+*.sqlite*
+*.zip
+*.log
+temp_uploads/
+exports/
+runs/
+runs_enhanced/
+eda_output/
+augmentation_output/
+submission*.csv
+dataset_local.yaml
+vlm_result_*
+yolo-cases/steel_data/*
+!yolo-cases/steel_data/dataset.yaml
+!yolo-cases/steel_data/README.md
