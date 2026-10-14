@@ -17,6 +17,27 @@
 
 ![System overview: detection, review, and dataset feedback](docs/assets/overview.svg)
 
+## Recorded demo
+
+**03:10** · Play inline or use the player's fullscreen control.
+
+Upload an image, try YOLO and VLM detection, review results, inspect records, export error cases and run batch predictions.
+
+https://github.com/user-attachments/assets/d346e19f-a398-43ef-a979-c9453fc4cfad
+
+**Approximate chapters:** `00:00` Image and YOLO detection · `00:58` VLM detection · `01:20` Human review · `01:35` Records · `02:00` Error-case export · `02:20` Batch prediction
+
+<details>
+<summary>Expand a screenshot from the recording</summary>
+
+![Steel Defect Inspection — Recorded demo](https://raw.githubusercontent.com/SimonLecake/ai-portfolio/main/assets/demos/steel.jpg)
+
+Captured from the author-provided recording. The application interface is in Chinese.
+
+</details>
+
+The recording demonstrates the workflow and individual results, not overall detection accuracy. Human review can still identify false positives or missed defects.
+
 ## Overview
 
 A Python application for steel surface defect inspection, combining two selectable approaches: a locally trained **YOLO detector** and a **Qwen-VL vision-language model** accessed through an OpenAI-compatible API.
